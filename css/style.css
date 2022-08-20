@@ -128,6 +128,21 @@ h2 {
   opacity: 1;
 }
 
+@media (max-width: 339px) {
+  .keys {
+    transform: rotate(90deg) translate(56%, -28%);
+  }
+}
+@media (max-width: 437px) {
+  .keys {
+    transform: rotate(90deg) translate(43%, -19%);
+  }
+}
+@media (max-width: 600px) {
+  .keys {
+    transform: rotate(90deg) translate(34%, -10%);
+  }
+}
 @media (max-width: 902px) {
   body {
     display: flex;
@@ -147,21 +162,5 @@ h2 {
   }
   .hints {
     display: none;
-  }
-}
-@media (max-width: 600px) {
-  .keys {
-    transform: rotate(90deg) translate(34%, -10%);
-  }
-}
-
-@media (max-width: 437px) {
-  .keys {
-    transform: rotate(90deg) translate(43%, -19%);
-  }
-}
-@media (max-width: 339px) {
-  .keys {
-    transform: rotate(90deg) translate(56%, -28%);
   }
 }
