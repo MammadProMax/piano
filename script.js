@@ -37,15 +37,15 @@ function keySound() {
   sound.play();
 }
 let pianoArea = document.querySelector(".keys");
-setInterval(() => {
-  if (screen.width <= 600) {
+if (window.innerWidth <= 600) {
+  setInterval(() => {
     if (!document.fullscreenElement) {
       pianoArea.style.display = "none";
     } else if (document.fullscreenElement) {
       pianoArea.style.display = "block";
     }
-  }
-}, 10);
+  }, 10);
+}
 
 playButton.addEventListener("click", function () {
   pianoArea.requestFullscreen();
