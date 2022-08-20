@@ -127,18 +127,20 @@ h2 {
 .keys:hover .hints {
   opacity: 1;
 }
-.fullscreen {
-  width: 100px;
-  height: 100px;
+.rotate {
   display: none;
 }
-
-@media (max-width: 902px) {
+@media (max-width: 915px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+  }
   .keys {
-    transform: rotate(90deg) translate(27%, 0);
-    display: block;
-    width: 700px;
-    height: 330px;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
   }
   .nowplaying {
     display: none;
@@ -150,28 +152,11 @@ h2 {
     display: none;
   }
 }
-@media (max-width: 600px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+@media (max-width: 500px) {
   .keys {
     display: none;
   }
-  .fullscreen {
+  .rotate {
     display: block;
-  }
-}
-
-@media (max-width: 437px) {
-  .keys {
-    transform: rotate(90deg) translate(43%, -19%);
-  }
-}
-@media (max-width: 339px) {
-  .keys {
-    transform: rotate(90deg) translate(56%, -28%);
   }
 }
