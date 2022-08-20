@@ -2,7 +2,7 @@ const note = document.querySelector(".nowplaying");
 const keys = document.querySelectorAll(".key");
 let keyHandler;
 
-let playButton = document.querySelector(".fullscreen");
+const pianoArea = document.querySelector(".keys");
 
 window.addEventListener("keydown", function (e) {
   const key = this.document.querySelector(`.key[data-key = "${e.keyCode}"]`);
@@ -36,18 +36,12 @@ function keySound() {
   sound.currentTime = 0;
   sound.play();
 }
-let pianoArea = document.querySelector(".keys");
-if (window.innerWidth <= 600) {
-  setInterval(() => {
-    if (!document.fullscreenElement) {
-      pianoArea.style.display = "none";
-    } else if (document.fullscreenElement) {
-      pianoArea.style.display = "block";
-    }
-  }, 10);
-}
 
-playButton.addEventListener("click", function () {
-  pianoArea.requestFullscreen();
-  pianoArea.style.display = "block";
-});
+if (this.innerWidth <= 908) {
+  pianoArea.style.width = `${this.innerWidth * 0.8}px`;
+  pianoArea.style.height = `${this.innerWidth * 0.35}px`;
+  window.addEventListener("resize", function () {
+    pianoArea.style.width = `${this.innerWidth * 0.8}px`;
+    pianoArea.style.height = `${this.innerWidth * 0.35}px`;
+  });
+}
